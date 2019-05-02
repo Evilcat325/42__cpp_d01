@@ -15,5 +15,8 @@ std::string Brain::identify() const
 	std::stringstream s(str);
 	s << this;
 	s >> str;
+
+	//if need to uppercase
+	//std::transform(str.begin(), str.end(), str.begin(), ::toupper);
 	return str;
 }
