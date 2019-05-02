@@ -1,8 +1,8 @@
 FLAGS = -Wall -Wextra -Werror
 STD = -std=c++98
 CC = clang++
-SOURCES = main.cpp Pony.cpp
-NAME = main
+SOURCES = *.cpp
+NAME = ex02
 
 $(NAME): $(SOURCES)
 	$(CC) $(FLAGS) $(STD) $(SOURCES) -o $(NAME)
