@@ -9,16 +9,15 @@
 
 class Logger
 {
-  private:
+private:
 	void logToConsole(std::string output);
 	void logToFile(std::string output);
 	std::string makeLogEntry(std::string message);
 	std::string getTimeStamp(void);
-	std::ofstream fout;
-	Logger &operator=(const Logger &);
+	std::ofstream &fout;
 
-  public:
-	Logger(std::string ilogfile);
+public:
+	Logger(std::ofstream &fout);
 	~Logger();
 	void log(std::string const &dest, std::string const &message);
 };

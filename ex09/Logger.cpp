@@ -1,15 +1,11 @@
 #include "Logger.hpp"
 
-Logger::Logger(std::string logfile)
+Logger::Logger(std::ofstream &ifout) : fout(ifout)
 {
-	fout.open(logfile, std::fstream::app);
-	if (!fout.is_open())
-		throw "Fail to open log file " + logfile;
 }
 
 Logger::~Logger()
 {
-	fout.close();
 }
 
 void Logger::log(std::string const &dest, std::string const &message)
